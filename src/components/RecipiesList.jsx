@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function RecipiesList({ recipes }) {
+function RecipiesList({ recipes, deleteRecipe }) {
   return (
     <div className="grid grid-cols-3 gap-5">
       {recipes.reverse().map((recipe) => (
@@ -19,6 +19,12 @@ function RecipiesList({ recipes }) {
               >
                 Read more
               </Link>
+              <button
+                onClick={() => deleteRecipe(recipe.id)}
+                className="btn btn-error"
+              >
+                Delete
+              </button>
             </div>
           </div>
         </div>

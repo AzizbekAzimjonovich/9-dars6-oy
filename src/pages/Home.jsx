@@ -14,7 +14,6 @@ function Home() {
       await fetch("http://localhost:3001/recipies/" + id, {
         method: "DELETE",
       });
-      // Qolgan kod...
     } catch (error) {
       console.error(error);
     }
